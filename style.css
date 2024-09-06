@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--LightGray);
+}
+.main {
+  width: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 8px 20px -18px black;
+}
+.top {
+  grid-column: span 2;
+  padding: 40px;
+  background-color: white;
+  h4 {
+    font-size: 23px;
+    color: var(--Cyan);
+  }
+  h5 {
+    font-size: 17px;
+    color: var(--BrightYellow);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+  p {
+    color: var(--GrayishBlue);
+    line-height: 25px;
+    font-weight: 400;
+  }
+}
+.left {
+  background-color: var(--Cyan);
+  padding: 40px;
+  h2 {
+    font-size: 17px;
+    color: white;
+  }
+  .dollar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0 10px 0;
+    h1 {
+      color: white;
+    }
+    p {
+      color: hsla(204, 25%, 79%, 0.778);
+    }
+  }
+  p {
+    color: var(--LightGray);
+  }
+  button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 40px;
+    background-color: var(--BrightYellow);
+    color: hsla(0, 0%, 100%, 0.766);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 2px 8px 20px -18px black;
+  }
+}
+.right {
+  padding: 40px;
+  background-color: hsl(179, 52%, 49%);
+  h2 {
+    color: white;
+    font-size: 17px;
+    padding-bottom: 20px;
+  }
+  ul {
+    list-style: none;
+    color: hsla(0, 0%, 100%, 0.637);
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 666px) {
+  .main {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .top,
+  .left,
+  .right {
+    padding: 20px;
+  }
+}
